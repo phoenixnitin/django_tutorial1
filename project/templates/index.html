@@ -1,0 +1,21 @@
+<!--DOCTYPE html-->
+
+<html>
+<body>
+<p>{{title}} is working.<br/>Today is {{day}}<br/></p>
+<h4>
+{% for obj in object_list%}
+<!--{% url "posts:detail" id=obj.id %}-->
+{{ obj.id }}<br/>
+<a href='{{obj.get_absolute_url}}'>{{ obj.title }}</a><br/>
+{{ obj.content }}<br/>
+{{ obj.updated }}<br/>
+{{ obj.timestamp }}<br/>
+{{ obj.phonenumber }}<br/>
+{{ obj.pk }}<br/>
+
+{% endfor %}
+</h4>
+
+</body>
+</html>

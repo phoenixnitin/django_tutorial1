@@ -1,0 +1,14 @@
+<!--DOCTYPE html-->
+{% load staticfiles %}
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'css/posts.css' %}">
+</head>
+<body>
+<h1>Form</h1>
+<form method="POST" action="">{% csrf_token %}
+{{ form.as_p}}
+<input type="submit" value="Create Post" />
+</form>
+</body>
+</html>
